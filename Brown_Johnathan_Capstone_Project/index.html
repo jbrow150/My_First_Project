@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang ="en">
+<head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Project.css">
+<title>Project</title>
+</head>
+
+<body>
+<img src="Images/Top25Logo2.png" alt="Top-left image" class="top-left-image">
+
+<!-- This is a section for the left oriented navigation -->
+ <div class="side-rectangle">
+    <nav class="main-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="SNES_subpage.html">SNES</a></li>
+        <li><a href="NES_subpage.html">NES</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+<!-- This is a section for the page title and quick nav -->
+<div class="top-center-header">
+
+  <h1 class="page-title">Top 25 Games</h1>
+
+<div class="nav-buttons">
+  <button class="nav-button" onclick="goBack()">&#8592; Previous</button>
+  <button class="nav-button" onclick="goForward()">Next &#8594;</button>
+</div>
+
+  </div>
+
+<!-- This is a section is for unique page navigation and to prevent negative space -->	
+<main>
+
+
+<section class="image-nav">
+  <a href="NES_subpage.html">
+    <img src="Images/NES_NAV.png" alt="NES Drawing Navigation" class="nav-image">
+  </a>
+  <a href="SNES_subpage.html">
+    <img src="Images/SNES_NAV.png" alt="SNES Drawing Navigation" class="nav-image">
+  </a>
+</section>
+</main>
+
+<footer class="site-footer">
+  <p>© 2025 Top25Games.com All rights reserved.</p>
+<p>
+    <a href="https://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px"
+            src="https://jigsaw.w3.org/css-validator/images/vcss-blue"
+            alt="Valid CSS!" />
+    </a>
+</p>
+</footer>
+
+<!-- JavaScript for next and back buttons -->
+<script>
+  function goBack() {
+    window.history.back();
+  }
+
+  function goForward() {
+    window.history.forward();
+  }
+</script>
+
+</body>
+</html>
