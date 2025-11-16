@@ -1,0 +1,437 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    #0089C5,   /* Rich Cyan-Blue */
+    #006a9e,   /* Darker Blue */
+    #003d55,   /* Deep Navy */
+    #000000    /* Black */
+  );
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+body, p, span, div {
+  text-align: center;
+  color: #FFFFFF; 
+  font-family: consolas;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  text-align: center;
+  color: #FFC90E;
+  font-weight: bold;
+  margin: 0.5em 0;
+  font-family: consolas;
+}
+
+/* === Images & Layout Boxes === */
+.top-left-image {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 200px;   
+  height: 143px;  
+  display: block;
+  border: 2px solid #FFFFFF; 
+  box-sizing: border-box;
+  z-index: 1000;  
+}
+
+.side-rectangle {
+  position: absolute;
+  top: 160px;
+  left: 20px;
+  width: 200px;
+  height: 800px; 
+  background-color: #000000;
+  border: 10px solid #FFFFFF;
+  box-sizing: border-box;
+  padding: 20px; 
+}
+
+.top-center-header {
+  width: 800px;
+  background-color: #000000;
+  border: 10px solid #FFFFFF;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
+}
+
+/* === Navigation === */
+.page-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.nav-button {
+  font-family: consolas;
+  font-size: 14px;
+  background-color: #000000;
+  color: #00B7EB;
+  border: 1px solid #FFFFFF;
+  padding: 6px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-buttons {
+  position: absolute;
+  bottom: 10px;
+  right: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  font-family: consolas;
+  font-size: 16px;
+  color: #00B7EB;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #FFC90E;
+  text-decoration: underline;
+}
+
+/* === Center Rectangle for Subpages === */
+.center-rectangle {
+  width: 800px;
+  overflow-y: auto;
+  background-color: #000000;
+  border: 10px solid #FFFFFF;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+}
+
+.center-rectangle li {
+  width: 100%;
+  padding: 8px 0;
+  text-align: left;
+}
+
+.center-rectangle ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+}
+
+.center-rectangle a {
+  text-decoration: none;
+  color: #00B7EB;
+  font-family: consolas;
+  font-weight: bold;
+  font-size: 18px;
+  transition: color 0.3s;
+  display: block;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.center-rectangle a:hover {
+  text-decoration: underline;
+  color: #FFC90E;
+}
+
+main {
+  flex: 1;
+  min-height: 240vh;
+}
+
+/* === Sidebar Navigation === */
+.main-nav ul {
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: #00B7EB;
+  font-family: consolas;
+  font-weight: bold;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+  color: #FFC90E;
+}
+
+/* === Responsive Navigation === */
+@media (max-width: 600px) {
+  .image-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-button {
+    width: 80%;
+    text-align: center;
+  }
+}
+
+/* === Image Navigation === */
+.image-nav {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.nav-image {
+  width: 200px;
+  height: auto;
+  border: 4px solid #FFFFFF;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.nav-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #FFC90E;
+  cursor: pointer;
+}
+
+/* === Legal Disclaimer === */
+.fair-use-disclaimer p {
+  margin-bottom: 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* === Footer === */
+.site-footer {
+  background-color: #000000;
+  color: #FFFFFF;
+  padding: 15px 30px;
+  font-family: consolas;
+  font-size: 14px;
+  border-top: 5px solid #FFFFFF;
+  white-space: nowrap;
+  text-align: center;
+  width: auto;
+  z-index: 1000;
+}
+
+/* === Table Animation === */
+@keyframes flashGoldWhite {
+  0%, 100% {
+    color: #FFC90E;
+  }
+  50% {
+    color: #FFFFFF;
+  }
+}
+
+.custom-table tbody tr {
+  animation: flashGoldWhite 1.2s infinite;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px; 
+  color: #FFFFFF;
+  font-family: consolas;
+}
+
+.custom-table th,
+.custom-table td {
+  border: 1px solid #FFFFFF;
+  padding: 6px 10px;
+  text-align: left;
+}
+
+.custom-table a {
+  color: #00B7EB;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.custom-table a:hover {
+  color: #FFC90E;
+  text-decoration: underline;
+}
+
+
+/* --- Top Section: title image left, text right --- */
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 40px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* Title screen image - larger and fixed ratio */
+.title-image {
+  flex: 1 1 40%;
+  max-width: 400px;        /* roughly twice as large as the small images */
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  object-fit: cover;
+}
+
+/* Text info area */
+.game-info {
+  flex: 1 1 50%;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #333;
+  min-width: 250px;
+}
+
+/* --- Bottom Section: 3 gameplay images side by side --- */
+.bottom-images {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.bottom-images .game-img {
+  width: 256px;
+  height: auto;
+  border-radius: 10px;
+  border: 2px solid #ccc;
+  transition: transform 0.2s ease;
+}
+
+.bottom-images .game-img:hover {
+  transform: scale(1.05);
+}
+
+/* --- Responsive layout for smaller screens --- */
+@media (max-width: 768px) {
+  .top-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .title-image {
+    max-width: 80%;
+  }
+
+  .game-info {
+    max-width: 90%;
+  }
+
+  .bottom-images .game-img {
+    width: 140px;
+  }
+}
+
+/* === Contact Form Section (added) === */
+.contact-form-section {
+  text-align: left;
+  color: #FFFFFF;
+  width: 100%;
+}
+
+.contact-form-section h3 {
+  color: #FFC90E;
+  margin-bottom: 10px;
+}
+
+.contact-form-section p {
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #000000;
+  border: 4px solid #FFFFFF;
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 0 10px #00B7EB;
+}
+
+.contact-form label {
+  font-weight: bold;
+  color: #FFC90E;
+  margin-bottom: 5px;
+}
+
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  background-color: #111111;
+  color: #FFFFFF;
+  border: 2px solid #00B7EB;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: consolas;
+  font-size: 14px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.contact-form input[type="text"]:focus,
+.contact-form input[type="email"]:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #FFC90E;
+  box-shadow: 0 0 8px #FFC90E;
+}
+
+.submit-button {
+  background-color: #00B7EB;
+  color: #000000;
+  font-weight: bold;
+  border: 2px solid #FFFFFF;
+  border-radius: 5px;
+  padding: 10px;
+  font-family: consolas;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #FFC90E;
+  color: #000000;
+  box-shadow: 0 0 10px #FFC90E;
+}
